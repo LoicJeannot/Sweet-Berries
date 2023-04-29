@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --light-gray: #F5F3EF;
+    --gray: #DCDCDC;
+    --dark-gray: #646464;
+    --black: #000;
+    --white: #FFF;
+    --yellow: #FEBD2F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: var(--light-gray);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+nav a {
+    color: var(--black);
+}
+
+.headerButton {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    font: 'Roboto', 18px, medium;
+    padding: 10px 20px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 10%;
+    gap: 30px;
+    margin: 10px;
+}
+
+.info h1{
+    font-family: 'Roboto Serif';
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.mainDescription {
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+
+.banner img {
+    width: 100%;
+    object-fit: cover;
+}
+.cards_container {
+    padding: 50px 10%;
+    gap: 60px 40px;
+    margin: 10px;
+}
+.detailed_card {
+    border-radius: 24px;
+    padding: 32px;
+    background-color: #FFFFFF;
+    position: relative;
+    height: 300px;
+}
+.yellow_card {
+    border-radius: 24px;
+    padding: 32px;
+    background-color: #FEBD2F;
+    height: 300px;
+}
+.cardDescription {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+.card_img {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+}
+.cardButton {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    border-radius: 20px;
+    font: 'Roboto', 16px, medium;
+    padding: 10px 20px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 20px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+}
+footer {
+    width: 100%;
+    background-color: #FEBD2F;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img {
+    float: center;
+}
+
+ @media all and (min-width: 821px){
+    .hamburger_menu {
+        display: none;
+    }
+    .banner {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .cards_container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+ }
+ @media all and (min-width: 415px) and (max-width: 820px) {
+    .hamburger_menu {
+        display: none;
+    }
+    .banner {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .cards_container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+ }
+ @media all and (max-width: 414px) {
+    nav a {
+        display: none;
+    }
+
+    .headerButton {
+        display: none;
+    }
+    .banner {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .cards_container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+ }
+
